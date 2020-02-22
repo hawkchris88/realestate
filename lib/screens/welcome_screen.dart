@@ -15,6 +15,18 @@ class Welcome extends StatelessWidget {
             width: double.infinity,
           ),
         ),
+        Padding(
+          padding: EdgeInsets.only(top: 200.0),
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                Image.asset('assets/images/realestate.png'),
+                SizedBox(height: 16.0),
+
+              ],
+            ),
+          ),
+        ),
         Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
