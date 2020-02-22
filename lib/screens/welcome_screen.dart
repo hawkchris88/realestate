@@ -22,7 +22,6 @@ class Welcome extends StatelessWidget {
               children: <Widget>[
                 Image.asset('assets/images/realestate.png'),
                 SizedBox(height: 16.0),
-
               ],
             ),
           ),
