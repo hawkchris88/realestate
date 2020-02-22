@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:realestate/screens/card_button.dart';
+import 'login_screen.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -19,44 +21,23 @@ class Welcome extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Center(
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(18.0, 18.0, 18.0, 0),
-                    child: Card(
-                      color: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(3.0),
-                      ),
-                      elevation: 5.0,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(90.0, 15.0, 90.0, 15.0),
-                        child: Text(
-                          'SIGN UP',
-                          style: TextStyle(color: Colors.white, fontSize: 20.0),
-                        ),
-                      ),
-                    ),
-                  ),
+                CardButton(
+                  buttonColor: Color(0xFFfb8c00),
+                  buttonText: 'SIGN UP',
+                  textColor: Colors.white,
+                  onTap: () {},
                 ),
-                Center(
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0),
-                    child: Card(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(3.0),
-                      ),
-                      elevation: 5.0,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(90.0, 15.0, 90.0, 15.0),
-                        child: Text(
-                          '  LOGIN ',
-                          style: TextStyle(color: Colors.black, fontSize: 20.0),
-                        ),
-                      ),
-                    ),
-                  ),
+                SizedBox(
+                  height: 15.0,
                 ),
+                CardButton(
+                    buttonText: 'SIGN IN',
+                    textColor: Colors.black,
+                    buttonColor: Colors.white,
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Login()));
+                    })
               ],
             ),
             SizedBox(
